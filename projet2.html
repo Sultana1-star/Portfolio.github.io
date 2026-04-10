@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style6.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <header>
+    
+    <h1>Projet 2 : Poubelle Intelligente avec ESP32</h1>
+
+    
+</header>
+<main>
+
+
+<div class="section">
+<h2>1. Introduction</h2>
+<p>
+Ce projet consiste à réaliser une poubelle intelligente capable de s’ouvrir automatiquement 
+lorsqu’une présence est détectée. Le système utilise une carte ESP32, un capteur ultrason,
+un écran LCD I2C et un capteur de température et d’humidité. Les informations sont affichées
+sur un écran LCD et sur une page web grâce à la connexion Wi-Fi.
+</p>
+</div>
+
+<div class="section">
+<h2>2. Objectifs du projet</h2>
+<ul>
+<li>Détecter la présence avec un capteur ultrason</li>
+<li>Ouvrir automatiquement la poubelle si la distance est ≤ 5 cm</li>
+<li>Afficher "Porte ouverte" ou "Porte fermée" sur l’écran LCD</li>
+<li>Utiliser une LED verte et une LED rouge pour indiquer l’état</li>
+<li>Activer un buzzer si la porte reste fermée</li>
+<li>Afficher les informations sur une page web</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>3. Matériels utilisés</h2>
+<ul>
+<li>ESP32</li>
+<li>Capteur Ultrason</li>
+<li>DHT11 (Température et humidité)</li>
+<li>Écran LCD I2C</li>
+<li>LED rouge</li>
+<li>LED verte</li>
+<li>Buzzer</li>
+<li>Résistances</li>
+<li>Breadboard</li>
+<li>Fils de connexion</li>
+<li>Connexion Wi-Fi</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>4. Applications utilisées</h2>
+
+<ul>
+<li><b>Visual Studio Code (VS Code)</b> : éditeur de code utilisé pour écrire et gérer le programme du projet.</li>
+
+<li><b>Extension PlatformIO</b> : extension installée dans VS Code permettant de programmer et téléverser le code vers l’ESP32.</li>
+
+<li><b>Navigateur Web</b> (Google Chrome, Firefox, etc.) : utilisé pour accéder à la page web générée par l’ESP32 et visualiser les données (température, humidité, distance et état de la porte).</li>
+</ul>
+
+</div>
+
+<div class="section">
+<h2>5. Principe de fonctionnement</h2>
+<p>
+Le capteur ultrason mesure la distance devant la poubelle.
+Si la distance détectée est inférieure ou égale à 5 cm :
+</p>
+
+<ul>
+<li>La porte s’ouvre</li>
+<li>La LED verte s’allume</li>
+<li>L’écran LCD affiche "Porte ouverte"</li>
+</ul>
+
+<p>Si la distance est supérieure à 5 cm :</p>
+
+<ul>
+<li>La porte reste fermée</li>
+<li>La LED rouge s’allume</li>
+<li>Le buzzer émet un signal sonore</li>
+<li>L’écran LCD affiche "Porte fermée"</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>6. Branchement des composants</h2>
+
+<p><b>Capteur Ultrason</b></p>
+<ul>
+<li>VCC → 5V</li>
+<li>GND → GND</li>
+<li>TRIG → GPIO 5</li>
+<li>ECHO → GPIO 18</li>
+</ul>
+
+<p><b>DHT11</b></p>
+<ul>
+<li>VCC → 5V</li>
+<li>GND → GND</li>
+<li>DATA → GPIO 4</li>
+</ul>
+
+<p><b>LCD I2C</b></p>
+<ul>
+<li>VCC → 5V</li>
+<li>GND → GND</li>
+<li>SDA → GPIO 21</li>
+<li>SCL → GPIO 22</li>
+</ul>
+
+<p><b>LED rouge</b></p>
+<ul>
+<li>Anode → GPIO 19</li>
+<li>Cathode → GND</li>
+</ul>
+
+<p><b>LED verte</b></p>
+<ul>
+<li>Anode → GPIO 23</li>
+<li>Cathode → GND</li>
+</ul>
+
+<p><b>Buzzer</b></p>
+<ul>
+<li>+ → GPIO 15</li>
+<li>- → GND</li>
+</ul>
+
+</div>
+
+<div class="section">
+<h2>7. Affichage sur la page Web</h2>
+<ul>
+<li>Température</li>
+<li>Humidité</li>
+<li>Distance détectée</li>
+<li>Porte ouverte ou fermée</li>
+<li>LED rouge ou LED verte</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>8. Conclusion</h2>
+<p>
+Ce projet montre comment utiliser l’ESP32 et plusieurs capteurs pour créer
+un système automatisé et connecté à Internet. La poubelle intelligente permet
+d’améliorer l’hygiène et démontre les possibilités de l’Internet des objets.
+Ce projet a étè fait en travail de groupe . j'ai énormément apprécié de travailler dans un groupe aussi dynamique
+<div class="section">
+    <video width="200" controls muted >
+        <source src="./photo/poubelle intéligente.mp4" type="video/mp4">
+    </video>
+</div>
+</p>
+</div>
+</main>
+</body>
+</html>

@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle, rgb(5,155,182), rgb(33,136,191), rgb(3,99,158));
+    color: rgb(243, 191, 95);
+}
+
+
+header {
+    padding: 20px;
+    border-bottom: 3px solid rgb(5, 64, 214);
+    background-color: rgba(0,0,0,0.2);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.container a {
+    color: rgb(243, 191, 95);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.container a:hover {
+    color: white;
+    transform: scale(1.05);
+}
+
+
+h1, h2 {
+    text-align: center;
+}
+
+
+.banniere {
+    background-image: url(./photo/photo1.webp);
+    background-size: cover;
+    background-position: center;
+    padding: 120px;
+    text-align: center;
+    border-radius: 15px;
+    margin: 30px;
+    font-size: 24px;
+}
+
+
+.apropos {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.apropos img {
+    width: 300px;
+    height: 350px;
+    border-radius: 15px;
+}
+
+.texte {
+    max-width: 700px;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+}

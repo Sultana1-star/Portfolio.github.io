@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Système de Contrôle d’Accès RFID</title>
+    <link rel="stylesheet" href="./style7.css">
+</head>
+<body>
+
+<header>
+    <h1>Projet3 : Système de Contrôle d’Accès avec RFID</h1>
+</header>
+
+<main>
+
+    <div class="section">
+        <h2>1. Introduction</h2>
+        <p>
+            Ce projet consiste à réaliser un système de contrôle d’accès intelligent
+            utilisant un badge RFID. Lorsqu’un badge autorisé est présenté devant le capteur,
+            la porte s’ouvre automatiquement grâce à un servo moteur.
+        </p>
+        <p>
+            Le système affiche les informations sur un écran LCD, utilise des LEDs
+            pour signaler l’état d’accès et un buzzer pour les alertes sonores.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>2. Objectifs du projet</h2>
+        <ul>
+            <li>Lire un badge RFID</li>
+            <li>Vérifier l’identité de l’utilisateur</li>
+            <li>Autoriser ou refuser l’accès</li>
+            <li>Ouvrir automatiquement une porte</li>
+            <li>Afficher les messages sur LCD</li>
+            <li>Utiliser un signal sonore et lumineux</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. Matériels utilisés</h2>
+        <ul>
+            <li>Carte Arduino Uno</li>
+            <li>Module RFID MFRC522</li>
+            <li>Badge RFID / carte RFID</li>
+            <li>Écran LCD 16x2</li>
+            <li>Servo moteur</li>
+            <li>LED verte</li>
+            <li>LED rouge</li>
+            <li>Buzzer</li>
+            <li>Fils de connexion</li>
+            <li>Breadboard</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4. Application utilisée</h2>
+        <ul>
+            <li>Arduino IDE pour programmer et téléverser le code</li>
+            <li>Moniteur série pour lire les UID des badges</li>
+            <li>Bibliothèques : SPI, MFRC522, LiquidCrystal, Servo</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>5. Branchement des composants</h2>
+
+        <p><b>Module RFID MFRC522</b></p>
+        <ul>
+            <li>SDA / SS → Pin 10</li>
+            <li>RST → Pin 9</li>
+            <li>MOSI → Pin 11</li>
+            <li>MISO → Pin 12</li>
+            <li>SCK → Pin 13</li>
+            <li>VCC → 3.3V</li>
+            <li>GND → GND</li>
+        </ul>
+
+        <p><b>LCD 16x2</b></p>
+        <ul>
+            <li>RS → A0</li>
+            <li>E → A1</li>
+            <li>D4 → A2</li>
+            <li>D5 → A3</li>
+            <li>D6 → Pin 2</li>
+            <li>D7 → Pin 3</li>
+        </ul>
+
+        <p><b>Servo moteur</b></p>
+        <ul>
+            <li>Signal → Pin 5</li>
+            <li>VCC → 5V</li>
+            <li>GND → GND</li>
+        </ul>
+
+        <p><b>LEDs et buzzer</b></p>
+        <ul>
+            <li>LED verte → Pin 6</li>
+            <li>LED rouge → Pin 7</li>
+            <li>Buzzer → Pin 8</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>6. Principe de fonctionnement</h2>
+        <p>
+            Lorsqu’un badge est détecté, le système lit son UID.
+        </p>
+
+        <ul>
+            <li>Si le badge correspond à l’UID autorisé → accès autorisé</li>
+            <li>La LED verte s’allume</li>
+            <li>Le buzzer émet un bip</li>
+            <li>Le servo moteur ouvre la porte à 90°</li>
+            <li>Après 3 secondes la porte se referme</li>
+        </ul>
+
+        <p>Si le badge n’est pas reconnu :</p>
+
+        <ul>
+            <li>Message “Accès refusé”</li>
+            <li>LED rouge allumée</li>
+            <li>3 bips sonores</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>7. Conclusion</h2>
+        <p>
+            Ce projet montre l’utilisation des systèmes embarqués
+            dans la sécurité et l’automatisation.
+            Il combine électronique, programmation et contrôle d’accès intelligent.
+        </p>
+    </div>
+
+</main>
+
+</body>
+</html>

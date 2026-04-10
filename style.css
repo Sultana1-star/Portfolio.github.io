@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle, rgb(251,252,251), rgb(146,178,238), rgb(82,82,214));
+
+}
+
+/* HEADER */
+header {
+    padding: 20px;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.header1 a {
+    color: rgb(13, 41, 82);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header1 a:hover {
+    color: white;
+}
+
+/* TITRE */
+h1 {
+    text-align: center;
+    color: rgb(13, 41, 82);
+    text-decoration: underline;
+}
+
+/* FORMULAIRE */
+.search-project {
+    width: 60%;
+    margin: 60px auto;
+}
+
+fieldset {
+    background-color: rgba(255,255,255,0.25);
+    border: 3px solid rgb(13, 41, 82);
+    border-radius: 15px;
+    padding: 30px;
+}
+
+legend {
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(13, 41, 82);
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid rgb(13, 41, 82);
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(13, 41, 82);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+article {
+    text-align: center;
+    margin-top: 40px;
+    color: rgb(13, 41, 82);
+}
