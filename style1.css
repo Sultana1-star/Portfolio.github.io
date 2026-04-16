@@ -4,7 +4,23 @@ body {
     background: radial-gradient(circle, rgb(5,155,182), rgb(33,136,191), rgb(3,99,158));
     color: rgb(243, 191, 95);
 }
+html {
+  scroll-behavior: smooth;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+button {
+  transition: 0.3s ease;
+}
 
+button:hover {
+  transform: scale(1.1);
+  background-color: #333;
+  color: white;
+}
 
 header {
     padding: 20px;
