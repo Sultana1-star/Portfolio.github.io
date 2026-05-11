@@ -4,6 +4,11 @@ body {
     background: radial-gradient(circle, rgb(251,252,251), rgb(146,178,238), rgb(82,82,214));
 }
 
+.succes {
+    color: rgb(62, 70, 215);
+    font-weight: bold;
+    margin-top: 15px;
+}
 
 header {
     padding: 20px;
